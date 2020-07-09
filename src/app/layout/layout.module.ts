@@ -7,10 +7,9 @@ import { MaterialModule } from '@app/core';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { SurveyComponent } from './survey/survey.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [LayoutComponent, SurveyComponent, DashboardComponent],
+  declarations: [LayoutComponent, SurveyComponent],
   imports: [
     CommonModule,
     FormsModule,
