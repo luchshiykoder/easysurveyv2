@@ -1,18 +1,16 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #drawer class="example-sidenav" mode="side" opened>
+<!-- <mat-sidenav-container class="example-container"> -->
+  <!-- <mat-sidenav #drawer class="example-sidenav" mode="side" opened>
     <div class="text-center">
       <p>Total Survey<sup><span class="badge badge-info">50</span></sup></p>
       <p>Total OnGoing Survey<sup><span class="badge badge-primary">20</span></sup></p>
       <p>Total Completed Survey<sup><span class="badge badge-success">30</span></sup></p>
     </div>
-  </mat-sidenav>
+  </mat-sidenav> -->
 
-  <mat-sidenav-content>
+  <!-- <mat-sidenav-content> -->
     <mat-toolbar *ngIf="currentUser">
       <div class="example-sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()" matTooltip="All Details">
           <img src="../assets/logo.png" alt="user" width="120px">
-        </button>
       </div>
       <span class="example-fill-remaining-space"></span>
       <span class="user-text">Welcome </span>
@@ -29,5 +27,5 @@
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  <!-- </mat-sidenav-content> -->
+<!-- </mat-sidenav-container> -->

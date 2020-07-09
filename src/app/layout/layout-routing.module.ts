@@ -2,9 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
+import { SurveyComponent } from './survey/survey.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: LayoutComponent, children: [] }
+  { path: '', component: LayoutComponent, children: [
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'survey/:type', component: SurveyComponent },
+    { path: '**', redirectTo: 'dashboard', pathMatch: 'full'}
+  ] }
 ];
 
 @NgModule({
