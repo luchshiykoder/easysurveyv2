@@ -1,0 +1,13 @@
+.card{
+    background: #fff;
+    color: #333E48;
+    border-color: transparent;
+    transition: ease;
+    box-shadow: 0 5px 12px 0 rgba(32,38,42,0.3);
+    transition: .15s box-shadow ease,.15s transform ease;
+    -moz-transition: .15s box-shadow ease,.15s transform ease;
+}
+.card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 2.25rem 1.5rem -1.5rem rgba(33,37,41,.3),0 0 1.5rem .5rem rgba(33,37,41,.05);
+}

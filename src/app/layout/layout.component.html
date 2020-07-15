@@ -1,14 +1,25 @@
-<!-- <mat-sidenav-container class="example-container"> -->
-  <!-- <mat-sidenav #drawer class="example-sidenav" mode="side" opened>
-    <div class="text-center">
-      <p>Total Survey<sup><span class="badge badge-info">50</span></sup></p>
-      <p>Total OnGoing Survey<sup><span class="badge badge-primary">20</span></sup></p>
-      <p>Total Completed Survey<sup><span class="badge badge-success">30</span></sup></p>
-    </div>
-  </mat-sidenav> -->
-
+  <header *ngIf="currentUser"  >
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <img src="../assets/logo.png" alt="user" width="120px">
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+                <span class="user-text">Welcome </span>
+                <span mat-button [matMenuTriggerFor]="menu" matTooltip="Logout" class="text-info">{{ currentUser.firstName }}
+                  {{ currentUser.lastName }} <i class="fa fa-user" aria-hidden="true"></i></span>
+                <mat-menu #menu="matMenu">
+                  <button class="save user-details" mat-menu-item (click)="resetPassword()"><i class="fa fa-keyboard-o"></i>
+                    Change Password</button>
+                  <button class="start user-details" mat-menu-item (click)="logoutProfile()"><i class="fa fa-lock"></i>
+                    Logout</button>
+                </mat-menu>
+              </div>
+          </div>
+      </div>
+</header>
   <!-- <mat-sidenav-content> -->
-    <mat-toolbar *ngIf="currentUser">
+    <!-- <mat-toolbar *ngIf="currentUser">
       <div class="example-sidenav-content">
           <img src="../assets/logo.png" alt="user" width="120px">
       </div>
@@ -22,10 +33,8 @@
         <button class="start user-details" mat-menu-item (click)="logoutProfile()"><i class="fa fa-lock"></i>
           Logout</button>
       </mat-menu>
-    </mat-toolbar>
+    </mat-toolbar> -->
 
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
-  <!-- </mat-sidenav-content> -->
-<!-- </mat-sidenav-container> -->

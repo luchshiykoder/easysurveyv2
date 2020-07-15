@@ -1,33 +1,8 @@
-@import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// @import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../app.component.scss';
 
-.example-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #eee;
+//my question : all lib css we will use by angukar.json but why we are using here ?
+header{
+  background-color: #e2e2e2;
+  padding: 20px 0;
 }
-.example-fill-remaining-space{
-    flex: 1 1 auto;
-}
-.mat-drawer-side{
-    border-right: none;
-    background: #5c5959;
-    color:#fff;
-    min-width: 250px;
-}
-.main-content{
-    padding: 0 20px;
-}
-.example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.example-sidenav {
-  padding: 20px;
-}
-
