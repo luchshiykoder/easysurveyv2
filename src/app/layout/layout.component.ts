@@ -10,7 +10,9 @@ export class LayoutComponent implements OnInit {
 
   currentUser;
 
-  constructor(private authService: AuthService) {}
+  constructor(public authService: AuthService) {
+    this.currentUser = this.authService.$currentUser.value;
+  }
 
   resetPassword() {
     console.log('CLICKED');

@@ -14,8 +14,8 @@
                             <h6 class="card-title"><img [src]="card.cardTitleImage" width="25">{{card.cardTitle}}</h6>
                             <h6 [ngClass]="card.cardSubheaderClass">{{card.cardSubheader}}</h6>
                             <p class="card-text">{{card.cardText}}</p>
-                            <a *ngFor="let cd of card.links" href="#" [ngClass]="cd.class"><i [ngClass]="cd.iconClass"
-                                    aria-hidden="true"></i>{{cd.name}}</a>&nbsp;
+                            <a *ngFor="let cd of card.links" href="#" [ngClass]="cd.class"><fa-icon [icon]="cd.iconClass"
+                                    aria-hidden="true"></fa-icon>{{cd.name}}</a>&nbsp;
                             <span *ngIf="card.spanText" [ngClass]="card.spanText.class">{{card.spanText.text}}</span>
                         </div>
                     </div>

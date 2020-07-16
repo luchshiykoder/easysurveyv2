@@ -1,6 +1,8 @@
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+
 interface ILinks {
   name: string;
-  iconClass: string;
+  iconClass: IconDefinition;
   class: string;
   link: string;
 }
