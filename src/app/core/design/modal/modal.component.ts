@@ -14,8 +14,6 @@ export class ModalComponent implements OnInit {
 
   constructor(public bsModalRef: BsModalRef) { }
 
-  ngOnInit(): void {
-    this.list.push('PROFIT');
-  }
+  ngOnInit(): void {  }
 
 }

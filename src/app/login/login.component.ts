@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
     setTimeout(() => {
       this.loading = false;
       localStorage.setItem('userDetails', JSON.stringify(this.loginForm.value));
+      console.log(this.authService.$currentUser);
       this.router.navigate(['main']);
     }, 500);
 

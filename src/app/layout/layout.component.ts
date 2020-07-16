@@ -8,10 +8,12 @@ import { AuthService } from '@app/core';
 })
 export class LayoutComponent implements OnInit {
 
-  currentUser;
+  currentUser = {firstName: 'Super', lastName: 'Admin', id: 1, username: 'demo', password: '12345678'};
+  name = this.currentUser.firstName + ' ' + this.currentUser.lastName;
 
   constructor(public authService: AuthService) {
-    this.currentUser = this.authService.$currentUser.value;
+    // this.currentUser = this.authService.$currentUser.value;
+    console.log(this.currentUser);
   }
 
   resetPassword() {
@@ -24,7 +26,7 @@ export class LayoutComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.currentUser = this.authService.$currentUser.value;
+    // this.currentUser = this.authService.$currentUser.value;
   }
 
 }
