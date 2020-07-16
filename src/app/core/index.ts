@@ -1,6 +1,7 @@
 // Interfaces
 export * from './interfaces/user.interface';
 export * from './interfaces/login.interface';
+export * from './interfaces/widget.interface';
 
 // Middlewares
 export * from './middlewares/auth.interceptor';
