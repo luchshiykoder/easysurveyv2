@@ -15,6 +15,8 @@ export class DashboardComponent implements OnInit {
   cardData: IWidget[] = cardData;
   bsModalRef: BsModalRef;
 
+  subheader = 'Armezo will be helpful for you to understand your trends, now';
+
   constructor(private modalService: BsModalService) { }
 
   openModal() {
