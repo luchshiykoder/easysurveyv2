@@ -14,3 +14,4 @@ export * from './guards/auth.guard';
 
 // Design
 export * from './design/material.module';
+export * from './design/modal/modal.component';

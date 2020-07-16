@@ -4,14 +4,14 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { ModalComponent } from '@app/core';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
-    FontAwesomeModule
-  ]
+    DashboardRoutingModule
+  ],
+  entryComponents: []
 })
 export class DashboardModule { }

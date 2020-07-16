@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IWidget } from '@app/core';
+import { IWidget, ModalComponent } from '@app/core';
 
 import { cardData } from './card-data';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 
 @Component({
@@ -12,8 +13,23 @@ import { cardData } from './card-data';
 export class DashboardComponent implements OnInit {
 
   cardData: IWidget[] = cardData;
+  bsModalRef: BsModalRef;
 
-  constructor() { }
+  constructor(private modalService: BsModalService) { }
+
+  openModal() {
+    const initialState = {
+      list: [
+        'Open a modal with component',
+        'Pass your data',
+        'Do something else',
+        '...'
+      ],
+      title: 'Modal with component'
+    };
+    this.bsModalRef = this.modalService.show(ModalComponent, {initialState});
+    this.bsModalRef.content.closeBtnName = 'Close';
+  }
 
   ngOnInit(): void {
   }

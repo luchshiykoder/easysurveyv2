@@ -4,7 +4,7 @@ interface ILinks {
   name: string;
   iconClass: IconDefinition;
   class: string;
-  link: string;
+  link: string | void;
 }
 
 export interface IWidget {
